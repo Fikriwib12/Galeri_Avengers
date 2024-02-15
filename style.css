@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+body{
+    background-image: url(img/TvaBg.jpg);
+}
+h1{
+   
+    font-weight: 400;
+    text-align: center;
+    font-size: 70px;
+    margin-top: 100px;
+    text-shadow: -4px -2px 2px rgba(0, 0, 0, 1);
+    color: white;
+}
+
+.container{
+    width: 650px;
+    border-radius: 8px;
+    box-shadow: 1px 3px 3px rgba(0,0,0,0.5);
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+   
+    
+}
+ul li{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%; 
+    overflow: hidden;
+    border: 5px solid #f5e8a3;
+    position: relative;
+    margin-right: 22px;
+    
+}
+ul li span{
+    display: block;
+    width: 130px;
+    height: 130px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 130px;
+    color: white;
+    opacity: 0;
+    transition: 500ms;
+}
+ul li a:hover span{
+    opacity: 1;
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+li a img{
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    
+}
