@@ -66,3 +66,66 @@ li a img{
     object-fit: cover;
     
 }
+
+.overlay{
+    position: fixed;
+   
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 2;
+    text-align: center;
+    padding: 115px;
+    transition: .5s;
+    
+}
+.overlay:target{
+    
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .7);
+    
+}
+
+.overlay:target img
+{
+    display: block;
+    animation: zoomAndFade 1s;
+    
+}
+
+.overlay img{
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
+    margin: auto;
+    box-shadow: 13px 4px 18px black;
+    display: none;
+}
+.overlay a {
+    display: none;
+    opacity: 0;
+}
+
+.overlay:target a{
+    display: block;
+    font-size: 40px;
+    color: whitesmoke;
+    position: absolute;
+    top: 60px;
+    right: 420px;
+    text-decoration: none;
+    animation: zoomAndFade 1s 0.8s forwards;
+ 
+}
+@keyframes zoomAndFade{
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
